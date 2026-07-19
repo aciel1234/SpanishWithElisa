@@ -1,0 +1,7 @@
+User-agent: *
+
+Allow: /
+
+
+Sitemap:
+https://aciel1234.github.io/SpanishWithElisa/sitemap.xml
