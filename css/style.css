@@ -57,11 +57,12 @@
 html{
 
     scroll-behavior:smooth;
-
+    
 }
 
 body{
-
+    
+    
     font-family:'Open Sans',sans-serif;
 
     background:var(--background);
@@ -97,6 +98,7 @@ ul{
 section{
 
     padding:100px 0;
+    overflow: hidden;
 
 }
 
