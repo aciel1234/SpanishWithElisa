@@ -1,0 +1,4274 @@
+/* =====================================================
+   SPANISH WITH ELISA
+   STYLE.CSS
+   PART 1
+=====================================================*/
+
+/*=========================
+  GOOGLE FONTS
+=========================*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/*=========================
+  CSS VARIABLES
+=========================*/
+
+:root{
+
+    --primary:#C62828;
+    --primary-dark:#a91f1f;
+
+    --secondary:#F4B400;
+
+    --dark:#2C2C2C;
+
+    --text:#555;
+
+    --light:#F7F7F7;
+
+    --white:#ffffff;
+
+    --background:#FFF8F0;
+
+    --border:#ececec;
+
+    --radius:14px;
+
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+
+    --transition:.35s ease;
+
+    --container:1200px;
+
+}
+
+
+/*=========================
+  RESET
+=========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Open Sans',sans-serif;
+
+    background:var(--background);
+
+    color:var(--dark);
+
+    line-height:1.7;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+section{
+
+    padding:100px 0;
+
+}
+
+
+/*=========================
+  CONTAINER
+=========================*/
+
+.container{
+
+    width:90%;
+
+    max-width:var(--container);
+
+    margin:auto;
+
+}
+
+
+/*=========================
+  HEADINGS
+=========================*/
+
+h1,h2,h3,h4{
+
+    font-family:'Poppins',sans-serif;
+
+    color:var(--dark);
+
+}
+
+h1{
+
+    font-size:3.8rem;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+}
+
+h2{
+
+    font-size:2.5rem;
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+h3{
+
+    font-size:1.4rem;
+
+    margin-bottom:15px;
+
+}
+
+p{
+
+    color:var(--text);
+
+}
+
+
+/*=========================
+  BUTTONS
+=========================*/
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    cursor:pointer;
+
+}
+
+.btn-primary{
+
+    background:var(--primary);
+
+    color:var(--white);
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow);
+
+}
+
+.btn-secondary{
+
+    background:white;
+
+    color:var(--primary);
+
+    border:2px solid var(--primary);
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+
+/*=========================
+  HEADER
+=========================*/
+
+header{
+
+    width:100%;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    z-index:999;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid rgba(0,0,0,.05);
+
+}
+
+header .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:80px;
+
+}
+
+
+/*=========================
+  LOGO
+=========================*/
+
+.logo{
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:1.6rem;
+
+    font-weight:700;
+
+}
+
+.logo span{
+
+    color:var(--primary);
+
+}
+
+
+/*=========================
+  NAVIGATION
+=========================*/
+
+nav ul{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+nav a{
+
+    font-weight:600;
+
+    position:relative;
+
+    transition:var(--transition);
+
+}
+
+nav a:hover{
+
+    color:var(--primary);
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary);
+
+    transition:var(--transition);
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+
+/*=========================
+  HERO
+=========================*/
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    padding-top:80px;
+
+    background:linear-gradient(
+        135deg,
+        #FFF8F0 0%,
+        #fff 100%
+    );
+
+}
+
+.hero-content{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+.hero-text p{
+
+    font-size:1.15rem;
+
+    margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-image{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.hero-image img{
+
+    width:420px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+/*=========================
+  SMALL DECORATION
+=========================*/
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    right:0;
+
+    top:120px;
+
+    width:320px;
+
+    height:320px;
+
+    background:rgba(244,180,0,.12);
+
+    border-radius:50%;
+
+    filter:blur(60px);
+
+}
+
+
+/*=========================
+  UTILITIES
+=========================*/
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-1{
+
+    margin-top:20px;
+
+}
+
+.mt-2{
+
+    margin-top:40px;
+
+}
+
+.mt-3{
+
+    margin-top:60px;
+
+}
+
+.mb-1{
+
+    margin-bottom:20px;
+
+}
+
+.mb-2{
+
+    margin-bottom:40px;
+
+}
+
+.mb-3{
+
+    margin-bottom:60px;
+
+}
+
+
+/*=========================
+  SCROLLBAR
+=========================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#f3f3f3;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary-dark);
+
+}
+
+
+/*=========================
+  SIMPLE FADE-IN ANIMATION
+=========================*/
+
+.fade-up{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:1s ease;
+
+}
+
+.fade-up.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/*=====================================================
+  PART 2
+  ABOUT • LESSONS • STUDENTS • WHY CHOOSE ME
+=====================================================*/
+
+
+/*=========================
+  SECTION TITLES
+=========================*/
+
+
+section h2::after{
+
+    content:"";
+
+    width:70px;
+    height:4px;
+
+    background:var(--secondary);
+
+    display:block;
+
+    margin:18px auto 0;
+
+    border-radius:10px;
+
+}
+
+
+/*=====================================================
+  ABOUT
+=====================================================*/
+
+.about{
+
+    background:var(--white);
+
+}
+
+.about .container{
+
+    max-width:900px;
+    text-align:center;
+
+}
+
+.about p{
+
+    font-size:1.15rem;
+    line-height:2;
+    color:var(--text);
+
+}
+
+
+/*=====================================================
+  LESSONS
+=====================================================*/
+
+.lessons{
+
+    background:var(--background);
+
+}
+
+
+/*=========================
+  CARD GRID
+=========================*/
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+
+}
+
+
+/*=========================
+  CARD
+=========================*/
+
+.card{
+
+    background:var(--white);
+
+    padding:40px;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s ease;
+
+    border:1px solid transparent;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+/* Decorative Top Line */
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:6px;
+
+    background:var(--primary);
+
+}
+
+
+/* Decorative Circle */
+
+.card::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-40px;
+    top:-40px;
+
+    width:120px;
+    height:120px;
+
+    background:rgba(244,180,0,.08);
+
+    border-radius:50%;
+
+}
+
+
+/* Hover */
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.12);
+
+    border-color:rgba(198,40,40,.15);
+
+}
+
+
+.card h3{
+
+    margin-bottom:20px;
+
+    color:var(--primary);
+
+    font-size:1.4rem;
+
+}
+
+.card p{
+
+    color:var(--text);
+
+    line-height:1.8;
+
+}
+
+
+/*=====================================================
+  STUDENTS
+=====================================================*/
+
+.students{
+
+    background:white;
+
+}
+
+
+/*=========================
+  GRID
+=========================*/
+
+.students-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(240px,1fr));
+
+    gap:25px;
+
+}
+
+
+/*=========================
+  BOX
+=========================*/
+
+.students-grid div{
+
+    background:linear-gradient(
+        135deg,
+        white,
+        #fffdf8
+    );
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:28px;
+
+    text-align:center;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.04);
+
+}
+
+
+.students-grid div:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 18px 35px rgba(198,40,40,.18);
+
+}
+
+
+/*=====================================================
+  WHY CHOOSE ME
+=====================================================*/
+
+.why{
+
+    background:linear-gradient(
+        135deg,
+        #fff,
+        #fff8f0
+    );
+
+}
+
+
+/*=========================
+  LIST
+=========================*/
+
+.why ul{
+
+    max-width:600px;
+
+    text-align:center;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+
+.why li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    font-weight:600;
+
+    color:var(--dark);
+
+    box-shadow:0 8px 22px rgba(0,0,0,.05);
+
+    transition:.35s;
+
+    border-left:5px solid var(--secondary);
+
+}
+
+
+.why li:hover{
+
+    transform:translateX(8px);
+
+    box-shadow:
+        0 16px 35px rgba(0,0,0,.10);
+
+}
+
+.why li i{
+
+    color:var(--primary);
+
+    font-size:1.5rem;
+
+}
+
+
+/*=====================================================
+  HOVER EFFECTS
+=====================================================*/
+
+.card,
+.students-grid div,
+.why li{
+
+    cursor:default;
+
+}
+
+
+/*=====================================================
+  SOFT SECTION SPACING
+=====================================================*/
+
+.about,
+.lessons,
+.students,
+.why{
+
+    position:relative;
+
+}
+
+
+/*=====================================================
+  BACKGROUND DECORATION
+=====================================================*/
+
+.lessons::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    background:
+        rgba(198,40,40,.04);
+
+    border-radius:50%;
+
+    top:40px;
+
+    left:-100px;
+
+    filter:blur(25px);
+
+}
+
+.students::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    right:-120px;
+
+    bottom:60px;
+
+    background:
+        rgba(244,180,0,.06);
+
+    border-radius:50%;
+
+    filter:blur(40px);
+
+}
+
+
+/*=====================================================
+  TESTIMONIALS
+=====================================================*/
+
+.reviews{
+
+    background:#ffffff;
+
+}
+
+.reviews-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+.review{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    border-top:5px solid var(--secondary);
+
+    position:relative;
+
+}
+
+.review:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.review p:first-child{
+
+    font-size:1.4rem;
+
+    margin-bottom:20px;
+
+}
+
+.review strong{
+
+    display:block;
+
+    margin-top:25px;
+
+    color:var(--primary);
+
+}
+
+
+/*=====================================================
+  SOCIAL
+=====================================================*/
+
+.social{
+
+    background:linear-gradient(135deg,#fff8f0,#ffffff);
+
+    text-align:center;
+
+}
+
+.social-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+}
+
+.social-links a{
+
+    background:white;
+
+    padding:18px 35px;
+
+    border-radius:50px;
+
+    box-shadow:var(--shadow);
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.social-links a:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+    transform:translateY(-6px);
+
+}
+
+
+/*=====================================================
+  CONTACT
+=====================================================*/
+
+
+.contact{
+
+    background: linear-gradient(rgba(255, 0, 0, 0.5), var(--primary));
+
+    color:white;
+
+}
+
+
+.contact-content{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:60px;
+
+}
+
+
+
+.contact-image{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+
+.contact-image img{
+
+    width:420px;
+
+    height:420px;
+
+    object-fit:cover;
+
+    border-radius:30px;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.25);
+
+    border:6px solid rgba(255,255,255,.25);
+
+}
+
+
+
+.contact-info h2{
+
+    color:white;
+
+    text-align:left;
+
+    transform:none;
+
+    left:auto;
+
+}
+
+
+
+.contact-info h2::after{
+
+    margin-left:0;
+
+}
+
+
+
+.contact-info p{
+
+    color:white;
+
+    font-size:1.15rem;
+
+    margin-bottom:35px;
+
+    line-height:1.8;
+
+}
+
+
+
+.contact-info .btn{
+
+    background:white;
+
+    color:var(--primary);
+
+}
+
+
+
+.contact-info .btn:hover{
+
+    background:var(--secondary);
+
+    color:var(--dark);
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+
+    .contact-content{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+
+    .contact-image{
+
+        order:-1;
+
+    }
+
+
+    .contact-image img{
+
+        width:280px;
+
+        height:280px;
+
+    }
+
+
+    .contact-info h2{
+
+        text-align:center;
+
+    }
+
+
+    .contact-info h2::after{
+
+        margin:18px auto 0;
+
+    }
+
+
+}
+
+/*=====================================================
+ CONTACT SOCIAL MEDIA
+=====================================================*/
+
+
+.contact-social{
+
+    margin-top:40px;
+
+}
+
+
+
+.contact-social h3{
+
+    color:white;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:1.2rem;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.social-icons{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.social-icons a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:14px 25px;
+
+    background:rgba(255,255,255,.15);
+
+    color:white;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    transition:.35s ease;
+
+}
+
+
+
+.social-icons i{
+
+    font-size:1.3rem;
+
+}
+
+
+
+.social-icons a:hover{
+
+    background:white;
+
+    color:var(--primary);
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .social-icons{
+
+        justify-content:center;
+
+    }
+
+}
+
+
+/*=====================================================
+  FOOTER
+=====================================================*/
+
+footer{
+
+    background:#202020;
+
+    color:#ddd;
+
+    text-align:center;
+
+    padding:30px 0;
+
+}
+
+footer p{
+
+    color:#ccc;
+
+    font-size:.95rem;
+
+}
+
+
+/*=====================================================
+  MOBILE MENU PLACEHOLDER
+=====================================================*/
+
+.menu-toggle{
+
+    display:none;
+
+    font-size:2rem;
+
+    cursor:pointer;
+
+}
+
+
+/*=====================================================
+  RESPONSIVE
+=====================================================*/
+
+@media(max-width:992px){
+
+    h1{
+
+        font-size:3rem;
+
+    }
+
+    .hero-content{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .hero-image{
+
+        order:-1;
+
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+
+    }
+
+    nav ul{
+
+        gap:20px;
+
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    section{
+
+        padding:80px 0;
+
+    }
+
+    h1{
+
+        font-size:2.4rem;
+
+    }
+
+    h2{
+
+        font-size:2rem;
+
+    }
+
+    header .container{
+
+        height:75px;
+
+    }
+
+    nav{
+
+        display:none;
+
+    }
+
+    .menu-toggle{
+
+        display:block;
+
+    }
+
+    .hero-image img{
+
+        width:300px;
+
+    }
+
+    .cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .students-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .why ul{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .reviews-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+@media(max-width:500px){
+
+    .btn{
+
+        width:100%;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .social-links{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .social-links a{
+
+        width:250px;
+
+    }
+
+}
+
+
+/*=====================================================
+  FADE-IN ANIMATION
+=====================================================*/
+
+.fade-up{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:1s ease;
+
+}
+
+.fade-up.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/*=====================================================
+  IMAGE HOVER
+=====================================================*/
+
+.hero-image img{
+
+    transition:.4s;
+
+}
+
+.hero-image img:hover{
+
+    transform:scale(1.04);
+
+}
+
+
+/*=====================================================
+  CARD ICON SUPPORT
+=====================================================*/
+
+.card i{
+
+    font-size:2.4rem;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+
+/*=====================================================
+  SELECTION
+=====================================================*/
+
+::selection{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+
+/*=====================================================
+  REMOVE BUTTON OUTLINES
+=====================================================*/
+
+button,
+input,
+textarea{
+
+    outline:none;
+
+    border:none;
+
+}
+
+
+/*=====================================================
+  INPUTS (Future Contact Form)
+=====================================================*/
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    border:1px solid #ddd;
+
+    font-family:'Open Sans',sans-serif;
+
+}
+
+textarea{
+
+    resize:vertical;
+
+    min-height:140px;
+
+}
+
+
+/*=====================================================
+  SMOOTH TRANSITIONS
+=====================================================*/
+
+a,
+button,
+.card,
+.review,
+.students-grid div,
+.social-links a{
+
+    transition:all .35s ease;
+
+}
+
+/*=====================================================
+  HAMBURGER MENU
+=====================================================*/
+
+.mobile-open{
+
+    display:block !important;
+
+    position:absolute;
+
+    top:80px;
+
+    left:0;
+
+    width:100%;
+
+    background:white;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.1);
+
+}
+
+.mobile-open ul{
+
+    flex-direction:column;
+
+    padding:25px;
+
+}
+
+nav a.active{
+
+    color:var(--primary);
+
+}
+
+
+
+/*=====================================================
+ ABOUT PAGE
+ SPANISH WITH ELISA
+=====================================================*/
+
+
+/*=====================================================
+ ABOUT HERO
+=====================================================*/
+
+.about-hero{
+
+    padding-top:160px;
+
+    background:linear-gradient(
+        135deg,
+        #fff8f0,
+        #ffffff
+    );
+
+}
+
+
+.about-hero-content{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+
+
+.about-photo{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+
+.about-photo img{
+
+    width:430px;
+
+    height:500px;
+
+    object-fit:cover;
+
+    border-radius:30px;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.15);
+
+    border:8px solid white;
+
+}
+
+
+
+.about-intro h1{
+
+    font-size:3.5rem;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.about-intro p{
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/*=====================================================
+ PROFESSIONAL BACKGROUND
+=====================================================*/
+
+.background{
+
+    background:white;
+
+}
+
+
+.background-content{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+
+
+.background-content p{
+
+    font-size:1.1rem;
+
+    line-height:2;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/*=====================================================
+ EDUCATION TIMELINE
+=====================================================*/
+
+.education{
+
+    background:#fff8f0;
+
+}
+
+
+
+.timeline{
+
+    max-width:850px;
+
+    margin:auto;
+
+    position:relative;
+
+}
+
+
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:30px;
+
+    top:0;
+
+    height:100%;
+
+    width:3px;
+
+    background:var(--primary);
+
+}
+
+
+
+.timeline-item{
+
+    display:flex;
+
+    gap:30px;
+
+    align-items:flex-start;
+
+    margin-bottom:45px;
+
+}
+
+
+
+.timeline-item i{
+
+    width:60px;
+
+    height:60px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--primary);
+
+    color:white;
+
+    border-radius:50%;
+
+    font-size:1.4rem;
+
+    z-index:2;
+
+}
+
+
+
+.timeline-item h3{
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+}
+
+
+
+.timeline-item p{
+
+    font-size:1.05rem;
+
+}
+
+
+
+
+/*=====================================================
+ TEACHING EXPERIENCE
+=====================================================*/
+
+
+.experience{
+
+    background:white;
+
+}
+
+
+
+.experience-box{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:50px;
+
+    border-radius:25px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #fff8f0
+    );
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+.experience-box i{
+
+    font-size:3rem;
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+}
+
+
+
+.experience-box p{
+
+    font-size:1.1rem;
+
+    line-height:1.9;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+/*=====================================================
+ METHODOLOGY
+=====================================================*/
+
+
+.methodology{
+
+    background:#fff8f0;
+
+}
+
+
+.section-description{
+
+    max-width:800px;
+
+    text-align:center;
+
+    margin:0 auto 50px;
+
+    font-size:1.15rem;
+
+}
+
+
+
+.method-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+
+.method-card{
+
+    background:white;
+
+    padding:35px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s ease;
+
+}
+
+
+
+.method-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.method-card i{
+
+    font-size:2.5rem;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+
+
+.method-card h3{
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+/*=====================================================
+ ABOUT PAGE RESPONSIVE
+=====================================================*/
+
+
+@media(max-width:992px){
+
+
+.about-hero-content{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+
+.about-photo{
+
+    order:-1;
+
+}
+
+
+.about-intro h1{
+
+    font-size:2.8rem;
+
+}
+
+
+
+}
+
+
+
+@media(max-width:768px){
+
+
+.about-photo img{
+
+    width:300px;
+
+    height:380px;
+
+}
+
+
+
+.timeline::before{
+
+    left:25px;
+
+}
+
+
+.timeline-item{
+
+    gap:20px;
+
+}
+
+
+.timeline-item i{
+
+    width:50px;
+
+    height:50px;
+
+}
+
+
+
+.experience-box{
+
+    padding:30px;
+
+}
+
+
+
+}
+
+
+
+/*=====================================================
+ LESSONS PAGE
+ SPANISH WITH ELISA
+=====================================================*/
+
+
+/*=====================================================
+ LESSON HERO
+=====================================================*/
+
+
+.lessons-hero{
+
+    padding-top:170px;
+
+    padding-bottom:120px;
+
+    text-align:center;
+
+    background:linear-gradient(
+        135deg,
+        #fff8f0,
+        #ffffff
+    );
+
+}
+
+
+
+.lessons-hero h1{
+
+    font-size:3.8rem;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.lessons-hero p{
+
+    max-width:750px;
+
+    margin:0 auto 40px;
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+}
+
+
+
+/*=====================================================
+ LESSON TYPES
+=====================================================*/
+
+
+.lesson-types{
+
+    background:white;
+
+}
+
+
+
+.lesson-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+
+.lesson-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    border-top:5px solid var(--primary);
+
+    transition:.35s ease;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.lesson-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:100px;
+
+    height:100px;
+
+    right:-30px;
+
+    top:-30px;
+
+    background:rgba(244,180,0,.12);
+
+    border-radius:50%;
+
+}
+
+
+
+.lesson-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,.12);
+
+}
+
+
+
+
+.lesson-card i{
+
+    font-size:2.8rem;
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+}
+
+
+
+.lesson-card h3{
+
+    font-size:1.25rem;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.lesson-card p{
+
+    line-height:1.8;
+
+}
+
+
+
+
+/*=====================================================
+ LESSON INFORMATION
+=====================================================*/
+
+
+.lesson-info{
+
+    background:#fff8f0;
+
+}
+
+
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+
+
+.info-box{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:
+
+    0 8px 25px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+}
+
+
+
+.info-box:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+.info-box i{
+
+    font-size:2.5rem;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+
+
+.info-box h3{
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+/*=====================================================
+ BOOKING PROCESS
+=====================================================*/
+
+
+.booking{
+
+    background:white;
+
+    text-align:center;
+
+}
+
+
+
+.steps{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:50px;
+
+    margin:50px 0;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.steps div{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+
+.steps span{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:1.8rem;
+
+    font-weight:700;
+
+}
+
+
+
+.steps p{
+
+    font-weight:600;
+
+}
+
+
+
+.booking-text{
+
+    max-width:700px;
+
+    margin:0 auto 35px;
+
+    font-size:1.1rem;
+
+}
+
+
+
+
+
+/*=====================================================
+ LESSON CTA BUTTON
+=====================================================*/
+
+
+.booking .btn{
+
+    padding-left:45px;
+
+    padding-right:45px;
+
+}
+
+
+
+
+/*=====================================================
+ LESSON PAGE RESPONSIVE
+=====================================================*/
+
+
+@media(max-width:992px){
+
+
+.lessons-hero h1{
+
+    font-size:3rem;
+
+}
+
+
+}
+
+
+
+
+@media(max-width:768px){
+
+
+.lessons-hero{
+
+    padding-top:130px;
+
+}
+
+
+
+.lessons-hero h1{
+
+    font-size:2.4rem;
+
+}
+
+
+
+.lesson-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.info-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.steps{
+
+    flex-direction:column;
+
+}
+
+
+
+.steps span{
+
+    width:60px;
+
+    height:60px;
+
+}
+
+
+}
+
+
+
+/*=====================================================
+ COURSES PAGE
+ SPANISH WITH ELISA
+=====================================================*/
+
+
+/*=====================================================
+ COURSES HERO
+=====================================================*/
+
+
+.courses-hero{
+
+    padding-top:170px;
+
+    padding-bottom:120px;
+
+    text-align:center;
+
+    background:linear-gradient(
+        135deg,
+        #fff8f0,
+        #ffffff
+    );
+
+}
+
+
+
+.courses-hero h1{
+
+    font-size:3.8rem;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.courses-hero p{
+
+    max-width:750px;
+
+    margin:0 auto 40px;
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+}
+
+
+
+/*=====================================================
+ LEVELS SECTION
+=====================================================*/
+
+
+.levels{
+
+    background:white;
+
+}
+
+
+
+.levels-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+
+}
+
+
+
+/*=====================================================
+ LEVEL CARD
+=====================================================*/
+
+
+.level-card{
+
+    background:white;
+
+    padding:40px 35px;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s ease;
+
+    border-top:6px solid var(--primary);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.level-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:130px;
+
+    height:130px;
+
+    top:-50px;
+
+    right:-50px;
+
+    background:rgba(244,180,0,.12);
+
+    border-radius:50%;
+
+}
+
+
+
+.level-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,.12);
+
+}
+
+
+
+
+/*=====================================================
+ LEVEL BADGE
+=====================================================*/
+
+
+.level-icon{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:1.8rem;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.level-icon i{
+
+    font-size:2rem;
+
+}
+
+
+
+
+
+.level-card h3{
+
+    font-size:1.5rem;
+
+    margin-bottom:15px;
+
+    color:var(--primary);
+
+}
+
+
+
+
+.level-card p{
+
+    margin-bottom:25px;
+
+    line-height:1.7;
+
+}
+
+
+
+
+
+/*=====================================================
+ COURSE LIST
+=====================================================*/
+
+
+.level-card ul{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+
+
+.level-card li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:var(--text);
+
+    font-size:.95rem;
+
+}
+
+
+
+.level-card li::before{
+
+    content:"✓";
+
+    width:22px;
+
+    height:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--secondary);
+
+    color:white;
+
+    border-radius:50%;
+
+    font-size:.8rem;
+
+    font-weight:bold;
+
+}
+
+
+
+
+
+/*=====================================================
+ CHOOSE LEVEL CTA
+=====================================================*/
+
+
+.choose-level{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        #8e1c1c
+    );
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+
+.choose-level h2{
+
+    color:white;
+
+}
+
+
+
+.choose-level h2::after{
+
+    background:var(--secondary);
+
+}
+
+
+
+.choose-level p{
+
+    max-width:750px;
+
+    margin:0 auto 35px;
+
+    color:white;
+
+    font-size:1.15rem;
+
+    line-height:1.8;
+
+}
+
+
+
+.choose-level .btn{
+
+    background:white;
+
+    color:var(--primary);
+
+}
+
+
+
+.choose-level .btn:hover{
+
+    background:var(--secondary);
+
+    color:var(--dark);
+
+}
+
+
+
+/*=====================================================
+ LEVEL CARD COLOR VARIATIONS
+=====================================================*/
+
+
+.level-card:nth-child(1){
+
+    border-top-color:#4caf50;
+
+}
+
+
+.level-card:nth-child(2){
+
+    border-top-color:#2196f3;
+
+}
+
+
+.level-card:nth-child(3){
+
+    border-top-color:#ff9800;
+
+}
+
+
+.level-card:nth-child(4){
+
+    border-top-color:#9c27b0;
+
+}
+
+
+.level-card:nth-child(5){
+
+    border-top-color:#e91e63;
+
+}
+
+
+.level-card:nth-child(6){
+
+    border-top-color:#009688;
+
+}
+
+
+
+
+
+/*=====================================================
+ RESPONSIVE
+=====================================================*/
+
+
+@media(max-width:992px){
+
+
+.courses-hero h1{
+
+    font-size:3rem;
+
+}
+
+
+}
+
+
+
+@media(max-width:768px){
+
+
+.courses-hero{
+
+    padding-top:130px;
+
+}
+
+
+
+.courses-hero h1{
+
+    font-size:2.4rem;
+
+}
+
+
+
+.levels-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.level-card{
+
+    padding:30px;
+
+}
+
+
+}
+
+
+
+/*=====================================================
+ CONTACT PAGE
+ SPANISH WITH ELISA
+=====================================================*/
+
+
+/*=====================================================
+ CONTACT HERO
+=====================================================*/
+
+
+.contact-hero{
+
+    padding-top:170px;
+
+    padding-bottom:110px;
+
+    text-align:center;
+
+    background:linear-gradient(
+        135deg,
+        #fff8f0,
+        #ffffff
+    );
+
+}
+
+
+
+.contact-hero h1{
+
+    font-size:3.8rem;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.contact-hero p{
+
+    max-width:750px;
+
+    margin:auto;
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+}
+
+
+
+
+/*=====================================================
+ CONTACT PAGE LAYOUT
+=====================================================*/
+
+
+.contact-page{
+
+    background:white;
+
+}
+
+
+
+.contact-layout{
+
+    display:grid;
+
+    grid-template-columns:1fr 1.2fr;
+
+    gap:60px;
+
+    align-items:start;
+
+}
+
+
+
+
+
+
+/*=====================================================
+ CONTACT DETAILS
+=====================================================*/
+
+
+.contact-details{
+
+    background:#fff8f0;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+.contact-details h2{
+
+    text-align:left;
+
+    transform:none;
+
+    left:auto;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.contact-details h2::after{
+
+    margin-left:0;
+
+}
+
+
+
+.contact-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:20px 0;
+
+    border-bottom:1px solid rgba(0,0,0,.08);
+
+}
+
+
+
+.contact-item:last-child{
+
+    border-bottom:none;
+
+}
+
+
+
+.contact-item i{
+
+    width:55px;
+
+    height:55px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--primary);
+
+    color:white;
+
+    border-radius:50%;
+
+    font-size:1.5rem;
+
+}
+
+
+
+.contact-item h3{
+
+    margin-bottom:5px;
+
+    font-size:1.1rem;
+
+}
+
+
+
+.contact-item p,
+.contact-item a{
+
+    color:var(--text);
+
+}
+
+
+
+.contact-item a:hover{
+
+    color:var(--primary);
+
+}
+
+
+
+
+
+
+/*=====================================================
+ CONTACT FORM
+=====================================================*/
+
+
+.contact-form{
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+    border:1px solid var(--border);
+
+}
+
+
+
+.contact-form h2{
+
+    text-align:left;
+
+    transform:none;
+
+    left:auto;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.contact-form h2::after{
+
+    margin-left:0;
+
+}
+
+
+
+
+.form-group{
+
+    margin-bottom:25px;
+
+}
+
+
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:var(--dark);
+
+}
+
+
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    font-family:'Open Sans',sans-serif;
+
+    font-size:1rem;
+
+    background:white;
+
+    transition:.3s;
+
+}
+
+
+
+.form-group textarea{
+
+    min-height:140px;
+
+    resize:vertical;
+
+}
+
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+
+    border-color:var(--primary);
+
+    box-shadow:
+
+    0 0 0 4px rgba(198,40,40,.1);
+
+}
+
+
+
+
+.contact-form button{
+
+    width:100%;
+
+    border:none;
+
+    font-size:1rem;
+
+}
+
+
+
+
+
+/*=====================================================
+ SOCIAL CONTACT COLORS
+=====================================================*/
+
+
+.contact-item .fa-instagram{
+
+    background:#E1306C;
+
+}
+
+
+
+.contact-item .fa-youtube{
+
+    background:#FF0000;
+
+}
+
+
+
+.contact-item .fa-tiktok{
+
+    background:#111;
+
+}
+
+
+
+.contact-item .fa-whatsapp{
+
+    background:#25D366;
+
+}
+
+
+
+
+
+
+/*=====================================================
+ CONTACT CTA
+=====================================================*/
+
+
+.contact h2{
+
+    color:white;
+
+}
+
+
+
+.contact p{
+
+    color:white;
+
+}
+
+
+
+
+
+/*=====================================================
+ RESPONSIVE
+=====================================================*/
+
+
+@media(max-width:992px){
+
+
+.contact-layout{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.contact-details{
+
+    order:2;
+
+}
+
+
+
+.contact-form{
+
+    order:1;
+
+}
+
+
+
+.contact-hero h1{
+
+    font-size:3rem;
+
+}
+
+
+}
+
+
+
+
+
+@media(max-width:768px){
+
+
+.contact-hero{
+
+    padding-top:130px;
+
+}
+
+
+
+.contact-hero h1{
+
+    font-size:2.4rem;
+
+}
+
+
+
+.contact-details,
+.contact-form{
+
+    padding:30px;
+
+}
+
+
+
+.contact-item{
+
+    align-items:flex-start;
+
+}
+
+
+
+}
+
+
+
+/*=====================================================
+ STUDENT REVIEWS PAGE
+ SPANISH WITH ELISA
+=====================================================*/
+
+
+/*=====================================================
+ REVIEWS HERO
+=====================================================*/
+
+
+.reviews-hero{
+
+    padding-top:170px;
+
+    padding-bottom:110px;
+
+    text-align:center;
+
+    background:linear-gradient(
+        135deg,
+        #fff8f0,
+        #ffffff
+    );
+
+}
+
+
+
+.reviews-hero h1{
+
+    font-size:3.8rem;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.reviews-hero p{
+
+    max-width:750px;
+
+    margin:auto;
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+}
+
+
+
+
+/*=====================================================
+ REVIEWS SECTION
+=====================================================*/
+
+
+.reviews-page{
+
+    background:white;
+
+}
+
+
+
+
+
+.reviews-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+
+
+
+
+
+/*=====================================================
+ REVIEW CARD
+=====================================================*/
+
+
+.review-card{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+    border-top:5px solid var(--secondary);
+
+    transition:.35s ease;
+
+    position:relative;
+
+}
+
+
+
+.review-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,.12);
+
+}
+
+
+
+
+.review-card::before{
+
+    content:"“";
+
+    position:absolute;
+
+    top:10px;
+
+    right:25px;
+
+    font-size:5rem;
+
+    font-family:Georgia,serif;
+
+    color:rgba(198,40,40,.1);
+
+}
+
+
+
+
+
+/*=====================================================
+ STARS
+=====================================================*/
+
+
+.stars{
+
+    color:#F4B400;
+
+    font-size:1.4rem;
+
+    letter-spacing:3px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+.review-text{
+
+    font-size:1.05rem;
+
+    line-height:1.9;
+
+    font-style:italic;
+
+    margin-bottom:30px;
+
+}
+
+
+
+
+
+/*=====================================================
+ STUDENT INFO
+=====================================================*/
+
+
+.student-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    border-top:1px solid #eee;
+
+    padding-top:25px;
+
+}
+
+
+
+.student-info i{
+
+    width:55px;
+
+    height:55px;
+
+    background:var(--primary);
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:1.3rem;
+
+}
+
+
+
+.student-info h3{
+
+    margin-bottom:5px;
+
+    font-size:1.2rem;
+
+}
+
+
+
+.student-info p{
+
+    margin:0;
+
+    font-size:.95rem;
+
+}
+
+
+
+.student-info span{
+
+    display:inline-block;
+
+    margin-top:8px;
+
+    padding:5px 12px;
+
+    background:#fff3d6;
+
+    color:#8a6500;
+
+    border-radius:20px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+}
+
+
+
+
+
+/*=====================================================
+ TRUST SECTION
+=====================================================*/
+
+
+.review-trust{
+
+    background:#fff8f0;
+
+}
+
+
+
+.trust-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.trust-grid div{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:
+
+    0 8px 25px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+}
+
+
+
+.trust-grid div:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+
+.trust-grid i{
+
+    font-size:2.8rem;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+
+
+.trust-grid h3{
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+
+/*=====================================================
+ REVIEW ANIMATION
+=====================================================*/
+
+
+.review-card,
+.trust-grid div{
+
+    animation:reviewAppear .8s ease;
+
+}
+
+
+
+@keyframes reviewAppear{
+
+
+from{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+/*=====================================================
+ RESPONSIVE
+=====================================================*/
+
+
+@media(max-width:992px){
+
+
+.reviews-hero h1{
+
+    font-size:3rem;
+
+}
+
+
+}
+
+
+
+@media(max-width:768px){
+
+
+.reviews-hero{
+
+    padding-top:130px;
+
+}
+
+
+
+.reviews-hero h1{
+
+    font-size:2.4rem;
+
+}
+
+
+
+.reviews-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.review-card{
+
+    padding:30px;
+
+}
+
+
+}
+
+
+
+/*=====================================================
+ FAQ PAGE
+ SPANISH WITH ELISA
+=====================================================*/
+
+
+/*=====================================================
+ FAQ HERO
+=====================================================*/
+
+
+.faq-hero{
+
+    padding-top:170px;
+
+    padding-bottom:110px;
+
+    text-align:center;
+
+    background:linear-gradient(
+        135deg,
+        #fff8f0,
+        #ffffff
+    );
+
+}
+
+
+
+.faq-hero h1{
+
+    font-size:3.8rem;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.faq-hero p{
+
+    max-width:750px;
+
+    margin:auto;
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+/*=====================================================
+ FAQ SECTION
+=====================================================*/
+
+
+.faq-section{
+
+    background:white;
+
+}
+
+
+
+.faq-container{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+
+
+
+/*=====================================================
+ FAQ ITEM
+=====================================================*/
+
+
+.faq-item{
+
+    background:white;
+
+    margin-bottom:20px;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:
+
+    0 8px 25px rgba(0,0,0,.08);
+
+    border-left:5px solid var(--primary);
+
+}
+
+
+
+
+
+/*=====================================================
+ QUESTION BUTTON
+=====================================================*/
+
+
+.faq-question{
+
+    width:100%;
+
+    padding:25px 30px;
+
+    background:white;
+
+    border:none;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:1.1rem;
+
+    font-weight:600;
+
+    color:var(--dark);
+
+    text-align:left;
+
+}
+
+
+
+.faq-question:hover{
+
+    color:var(--primary);
+
+}
+
+
+
+.faq-question i{
+
+    color:var(--primary);
+
+    font-size:1.2rem;
+
+    transition:.3s;
+
+}
+
+
+
+
+/*=====================================================
+ ANSWER
+=====================================================*/
+
+
+.faq-answer{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:
+
+    max-height .4s ease,
+
+    padding .4s ease;
+
+    background:#fff8f0;
+
+}
+
+
+
+.faq-answer p{
+
+    padding:0 30px;
+
+    line-height:1.8;
+
+    font-size:1rem;
+
+}
+
+
+
+
+
+/* ACTIVE STATE */
+
+
+.faq-item.active .faq-answer{
+
+    max-height:200px;
+
+}
+
+
+
+.faq-item.active .faq-answer p{
+
+    padding-top:20px;
+
+    padding-bottom:25px;
+
+}
+
+
+
+.faq-item.active .faq-question i{
+
+    transform:rotate(45deg);
+
+}
+
+
+
+
+
+/*=====================================================
+ FAQ ANIMATION
+=====================================================*/
+
+
+.faq-item{
+
+    animation:faqFade .7s ease;
+
+}
+
+
+
+@keyframes faqFade{
+
+
+from{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+
+/*=====================================================
+ RESPONSIVE
+=====================================================*/
+
+
+@media(max-width:992px){
+
+
+.faq-hero h1{
+
+    font-size:3rem;
+
+}
+
+
+}
+
+
+
+
+@media(max-width:768px){
+
+
+.faq-hero{
+
+    padding-top:130px;
+
+}
+
+
+
+.faq-hero h1{
+
+    font-size:2.4rem;
+
+}
+
+
+
+.faq-question{
+
+    padding:20px;
+
+    font-size:.95rem;
+
+}
+
+
+
+.faq-answer p{
+
+    padding-left:20px;
+
+    padding-right:20px;
+
+}
+
+
+}
